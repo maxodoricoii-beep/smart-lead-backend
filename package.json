@@ -1,64 +1,14 @@
 {
-  "name": "smart-lead-backend",
-  "version": "1.0.0",
-  "description": "Backend per Smart Lead SaaS con OpenAI",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "openai": "^4.47.1"
-  }
+"name": "smart-lead-backend",
+"version": "1.0.0",
+"description": "Backend per Smart Lead SaaS con OpenAI",
+"main": "server.js",
+"scripts": {
+"start": "node server.js"
+},
+"dependencies": {
+"cors": "^2.8.5",
+"express": "^4.19.2",
+"openai": "^4.47.1"
 }
-```
-
-4. Fai il `commit` e il `push` di questi due file (`server.js` e `package.json`) sul tuo branch principale di GitHub (`main` o `master`).
-
----
-
-#### Passo 2: Collega GitHub a Render
-1. Vai su [render.com](https://render.com/) e registrati gratuitamente (puoi accedere direttamente con il tuo account GitHub).
-2. Una volta nella dashboard di Render, clicca sul pulsante in alto a destra **"New +"** e seleziona **"Web Service"**.
-3. Clicca su **"Build and deploy from a Git repository"** e connetti il tuo account GitHub dando i permessi al repository `smart-lead-backend`.
-4. Seleziona il repository che hai appena creato.
-
----
-
-#### Passo 3: Configura il Web Service
-Render ti chiederà di configurare alcuni parametri di base per avviare l'app:
-* **Name**: `smart-lead-backend` (o un nome a tua scelta).
-* **Region**: Scegli quella più vicina (es. *Frankfurt*).
-* **Branch**: `main`.
-* **Runtime**: `Node`.
-* **Build Command**: `npm install`
-* **Start Command**: `node server.js`
-* **Instance Type**: Scegli il piano **Free** (gratuito).
-
----
-
-#### Passo 4: Aggiungi la Chiave API di OpenAI (Variabile d'Ambiente)
-Prima di cliccare su deploy, devi passare la tua chiave segreta di OpenAI in modo sicuro senza scriverla nel codice:
-1. Scorri la pagina fino alla sezione **Environment Variables** (o *Advanced*).
-2. Clicca su **Add Environment Variable**.
-3. Inserisci:
-   * **Key**: `OPENAI_API_KEY`
-   * **Value**: `sk-proj-la-tua-chiave-openai-segreta...` (la chiave che usi su OpenAI).
-
----
-
-#### Passo 5: Avvia il Deploy!
-1. Clicca sul pulsante in fondo **"Create Web Service"**.
-2. Render inizierà a scaricare il codice, installare le dipendenze (`express`, `cors`, `openai`) e avviare il server.
-3. Dopo 1 o 2 minuti, vedrai lo stato diventare verde con la scritta **"Live"**.
-
----
-
-### Fatto! Dove trovi il tuo URL?
-In alto nella dashboard del tuo servizio su Render, vedrai un URL pubblico simile a questo:
-`https://smart-lead-backend-xxxx.onrender.com`
-
-Questo è l'indirizzo ufficiale del tuo backend online attivo 24 ore su 24! Ora potrai inserire questo URL nel frontend della tua app SaaS in modo che il widget di chat possa comunicare direttamente con la tua intelligenza artificiale.
-
-Hai bisogno di aiuto con qualche passaggio specifico di questa procedura?
+}
